@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banana</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <style>
+    main {
+      min-width: 100vh;
+      padding: 80px;
+      background-color: white;
+    }
+    .product{
+      margin-top: -40px;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1em;
+    } 
+
+    .product-image{
+        max-width: 50%;
+        object-fit: contain;
+        background-color: hsl(180, 45%, 94%);
+        border-radius: 8px;
+    }
+
+    .product-description {
+        flex: 1;
+        flex-direction: row;
+    }
+
+    .buy-options button{
+      margin-top: 10px;
+      margin-bottom: 4px;
+      margin-right: 10px;
+      padding: 12px;
+      width: 100px;
+      background-color: hsl(131, 66%, 21%);
+      color: whitesmoke;
+      border-radius: 8px;
+      transition: all ease 0.2s;
+      border: none;
+    }
+    .buy-options button:hover{
+      background-color: rgb(0, 0, 0);
+      transform: translateY(-3px);
+      cursor: pointer;
+    }
+    .buy-options button:active{
+      background-color: hsl(0, 72%, 53%);
+    }
+
+    .product-reviews article {
+        border-bottom: 2px solid #100f0f;
+        padding: 1em 0;
+    }
+    
+    .product-features, .product-reviews {
+        margin-top: 2em;  
+    }
+
+    .product-quantity {
+        margin: 1em 0;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .product-quantity input {
+      margin-left: 10px;
+      width: 40px;
+      padding: 2px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <nav> <!--This is a navigation bar for the website-->
+
+    <div class="left-section">
+      <img class="website-logo" src="../images/logo.png" alt="sabji-mandu logo">
+    </div>
+
+    <div class="middle-section">
+      <a class="header" href="../index.html"> Home </a>
+      <a class="header" href="product.html" style=" color: white; border: 2px solid white;"> Product </a>
+      <a class="header" href="blog.html"> Blog </a>
+      <a class="header" href="research.html"> Research </a>
+      <a class="header" href="about-us.html"> About Us </a>
+    </div>
+    
+    
+    <div class="right-section">
+      <!--login and signin buttons for header-->
+      <a class="header-buttons" href="log-in.html">Log In</a>
+      <a class="header-buttons" href="sign-up.html ">Sign Up</a>
+      
+    </div> 
+  </nav>
+
+  <main class="product-page">
+    <h1 class="product">Fresh Organic Bananas</h1>
+    <section class="product-container">
+      <img class="product-image" src="../images/banana.png" alt="Bananas">
+      <div class="product-description" style="font-size: 16px;">
+        <h1>Description</h1>
+        <p>
+          Discover the pure, natural taste of our fresh, organic bananas. Grown sustainably and without chemicals, these bananas are packed with flavor and nutrients. Choose from a variety of ripe options, all hand-selected for freshness. Perfect for snacking, baking, or adding to your morning smoothie, our bananas bring wholesome goodness to your table.
+        </p>
+        <div class="product-quantity">
+          <p>Quantity: </p>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+        <p style="font-size: xx-small; color: gray;" >(All Tax Included)</p>
+        <p>$ 2</p>
+        <div class="buy-options">
+          <button>Buy</button>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+    </section>
+
+    <section class="product-features" style="margin-left: 16px;">
+      <h2 style="margin-left: -16px;">Product Features</h2>
+      <ol>
+        <li> Each banana is carefully selected to ensure uniformity, providing a reliable snacking experience every time. </li>
+        <li> Choose from a range of ripeness levels, including green, yellow, and ripe, to suit your preferences and recipes. </li>
+        <li> Our bananas are harvested at peak ripeness and stored using optimal techniques to maintain freshness for longer periods. </li>
+        <li> Packed with essential vitamins, minerals, and dietary fiber, our bananas offer a nutritious addition to any meal or snack. </li>
+        <li> Whether eaten as a quick snack, sliced into cereal, or blended into a smoothie, our bananas are a versatile and delicious fruit option. </li>
+      </ol>
+    </section>
+    
+    <section class="product-reviews">
+      <h2>Reviews</h2>
+      <article>
+        <h3>John Doe</h3>
+        <p>★★★★★</p>
+        <p>
+          These organic bananas are fantastic! They have a delicious flavor and are perfect for my morning smoothies. Plus, knowing they're sustainably grown makes them even better!
+        </p>
+      </article>
+
+      <article>
+        <h3>Jane Smith</h3>
+        <p>★★★★</p>
+        <p>These bananas are great for baking! I love using them in banana bread and muffins. They always add a natural sweetness and moistness to my recipes.</p>
+      </article>
+      
+      <article>
+      <h3>Emily Johnson</h3>
+        <p>★★★★★</p>
+        <p>These bananas are consistently fresh and delicious! Whether I'm enjoying them on their own or incorporating them into my breakfast smoothie, they always taste amazing. Plus, the convenience of having them delivered right to my door is unbeatable!</p>
+      </article>
+    </section>
+    
+</main>
+<!--footer tag-->
+<footer>
+  <div class="footer-content">
+    <div class="logo">
+      <img style="margin-top: 36px;" width="100px" src="../images/logo.png" alt="Website Logo">
+    </div>
+      
+    <div class="f-About-us">
+      <h3>About Us</h3>
+      <p>
+        Sabji Mandu Supermarket is a family-operated and owned premier grocery chain in Nepal.
+        We carry fresh produce, fruits and vegetables with a wide selection of groceries 
+      </p>

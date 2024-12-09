@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!--icon from FontAwesome-->
+    <script src="https://kit.fontawesome.com/358c62a0eb.js" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+      body{
+        margin-top: 90px;
+      }
+      .blog-background{
+        margin-top: -10px;
+        position: fixed;
+        z-index: -3;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        background-color: rgb(52, 52, 52);
+      }
+      
+      main {
+        display: flex;
+        flex-direction: column; /*the flex items are laid out in a vertical column, from top to bottom.*/
+        align-items: center; /* Center align content horizontally */
+        padding: 20px;/* Added padding to main container */
+      }
+      /* Individual blog post */
+      .card {
+        display: flex;
+        flex-direction: row;/*the flex items are laid out in a horizontal row, from left to right.*/
+        margin-bottom: 40px;/*adds a space of 40 pixels below the element*/
+        border-radius: 8px; /* Rounded corners for cards */
+        box-shadow: 2px 2px 12px rgb(0, 0, 0); /* Added box shadow for cards */
+        overflow: hidden; /* Hide overflow for rounded corners */
+        /* background-color:#cbeef3; Added background color for cards */  
+        transition: transform 0.3s ease;
+        padding: 30px;
+        background-color: hsla(208, 100%, 97%, 0.598);
+      }
+      .card:hover {
+        transform: translateY(-5px); /* Move card up on hover */
+        /* Smooth transition */
+      }
+      .content {
+        flex: 60%;
+        padding: 30px;
+        text-align: justify; 
+      }
+      .image {
+        flex: 40%;
+        display: flex;
+        justify-content: center;/*centers the flex items horizontally within the flex container. */
+        align-items:center;/*centers the flex items vertically within the flex container.*/
+        overflow: hidden; /* Hide overflow for rounded corners */   
+      }
+      /* Ensuring images don't exceed container width
+      border-radius: 8px;sets the image round  */
+      .image img {
+        max-width: 100%; /* Adjusted to 100% */
+        max-height: 100%; /* Adjusted to 100% */
+        border-radius: 8px; /* Rounded corners for images */
+      }    
+
+      /* Setting the background color of h1 */
+      h1{
+        margin-bottom: 20px;
+        border-radius: 8px; /* Rounded corners for header */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Example text shadow */
+      }
+      /* Styling for highlighted text */
+      mark {
+        background-color:transparent; /* Changed background color to white */
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav> <!--This is a navigation bar for the website-->
+
+      <div class="left-section">
+        <img class="website-logo" src="../images/logo.png" alt="sabji-mandu logo">
+      </div>
+
+      <div class="middle-section">
+        <a class="header" href="../index.html"> Home </a>
+        <a class="header" href="product.html"> Product </a>
+        <a class="header" href="blog.html" style=" color: white; border: 2px solid white;"> Blog </a>
+        <a class="header" href="research.html"> Research </a>
+        <a class="header" href="about-us.html"> About Us </a>
+      </div>
+      
+      
+      <div class="right-section">
+        <!--login and signin buttons for header-->
+        <a class="header-buttons" href="log-in.html">Log In</a>
+        <a class="header-buttons" href="sign-up.html ">Sign Up</a>
+        
+      </div> 
+    </nav>
+
+    <img class="blog-background" src="../images/blog-background.jpg" alt="blog-background">
+    <!-- main content is here -->
+    <main>
+
+      <!-- first article "card"  -->
+      <article class="card">
+
+        <!-- left side column "content" containing title and description -->
+        <div class="content">
+          <h1 style="text-align:left ;"><mark>INTRODUCTION ABOUT TECHNOLOGY</mark></h1><br><br>
+          <p>
+            Technology is the application of conceptual knowledge for achieving practical goals.
+            Technology is being used in each and every  field.Today is the world of revolutionary technology.Similarly, 
+            technology has been bringing revolution in online grocery shopping. Online grocery shopping is a business which 
+            involves in sale of food products to customers. This industry is ensuring access to food items from grocery stores 
+            and supermarkets  to online food stores and online retailers. In recent years, this industry has witnessed advancements 
+            in technology. It is revolutionizing the way businesses operate and interact with customers. These advancements has 
+            improved efficiency, convenience and personalized experience.
+          </p>
+        </div>
+
+        <!-- right side column "image" containing link of image -->
+        <div class="image">
+            <img src="../images/blog-img2.webp" alt="introduction" height="300px">
+        </div>
+      </article><br>
+
+      <!-- second article "card"  -->
+      <article class="card">
+
+        <!-- left side column "image" containing link of image -->
+        <div class="image">
+          <img src="../images/blog-img1.jpg" alt="positive impact " height="900px">
+        </div>
+
+        <!-- right side column "content" containing title and description -->
+        <div class="content">
+          <h1 style="text-align: left;  background-color: transparent;"><mark>POSITIVE IMPACT</mark></h1><br><br>
+          <p>
+            Technology has various positive impact in online grocery shopping as it makes our shopping easier, faster, and much more convenient.
+            The various positive impact of technology in grocery shopping is given below: <br><br>
+            <b>Better customer experience</b> <br><br>
+            Online and mobile grocery ordering systems have transformed the way customers order their meals. On these platforms, customers can 
+            conveniently browse menus, place orders and pay via smartphone or computer. Online and mobile ordering platforms provide customers 
+            with a hassle-free and time-saving experience without having to queue or make phone calls. <br><br>
+            Technological advances allow grocers to collect and analyze customer data to provide personalized recommendations and offers. The use 
+            of algorithms and machine learning enables retailers to tailor their recommendations and offers accordingly, considering customer preferences, 
+            purchase history, and browsing behavior. This personalized approach improves the overall shopping experience and increases customer satisfaction. 
+            <br><br>
+
+            <b>Smooth Operations and Supply Chain Management</b><br><br>
+            Technology has revolutionized food management through advanced storage systems. These systems use real-time data to monitor and track inventory 
+            levels, providing grocers with accurate information about their inventory levels. By automating inventory tracking, grocery stores can optimize  
+            inventory replenishment, minimize waste, and prevent stockouts. Inventory optimization makes operations more efficient and saves costs. <br><br>
+
+            Automated ordering and replenishment systems ensure a smooth supply chain process. These systems use historical sales data, inventory and other 
+            variables to automatically trigger orders when inventory levels reach a predetermined threshold. By automating the ordering process, grocers can 
+            minimize the risk of human error and optimize ordering time, improve inventory and reduce costs. <br><br>
+
+            <b> 
+            Improved food safety and quality
+            </b><br><br>
+            IOT (Internet of Things) devices for temperature monitoring:
+            Iot devices play an important role in ensuring food safety and quality throughout the supply chain.Sensors inside these intelligent gadgets can 
+            send real-time data about environmental conditions, such as temperature and humidity. In the grocery store, IOT devices are often used to monitor 
+            the temperature of cold storage, transportation equipment and even individual food items. These devices can detect and alert users when temperature 
+            levels are above safety thresholds, allowing for corrective actions to be taken as needed.The technology enables the preservation of food by preventing 
+            spoilage, reducing the risk of illness, and maintaining perishable goods from farm to table. <br><br>
+
+            <b>
+            Quality control and food safety management systems:
+            </b><br><br>
+            To maintain high standards in food retailing, it is essential to have sound quality control and food safety management systems. These systems often 
+            include comprehensive protocols, such as hazard analysis critical control points, to identify and mitigate potential hazards at critical stages of 
+            food processing and handling. Through the use of technologies like data analysis and real-time monitoring, these systems can detect risks and deviations 
+            from security parameters. By carefully controlling processes, ingredients and storage conditions, food retailers can maintain consistent food quality 
+            and safety.These systems also help ensure that grocers follow legal procedures, certification processes and industry benchmarks. <br><br> 
+
+            <b>Quick and evolving shopping experience</b><br><br>
+            Imagine walking through a grocery store and effortlessly selecting your desired items and then just walk out without ever having to stand in line 
+            or interact with a cashier.Welcome to the world of cash registers and cashless stores. Advanced technology allows you to scan and pay for your items 
+            on the go, making checkout a thing of the past.
+            As you explore the store, you'll be mesmerized by bright digital interactive displays that seem to come alive, providing you with exciting product 
+            information, delicious recipe ideas and even personalized recommendations based on your purchase history. It's like your own shopping assistant at 
+            your fingertips.
+          </p>
+        </div>
+      </article><br><br><br><br><br><br>
+
+
+      <!-- third article "card"  -->
+      <article class="card">
+        <!-- left side column "content" containing title and description -->
+        <div class="content">
+          <h1 style="text-align:left"><mark>NEGATIVE IMPACT</mark></h1> <br><br>
+
+          Online grocery shopping has negative impact too.Below are the few examples of such impacts: <br><br>
+          <b>Complexity of operations</b><br><br>
+          Operational complexity is one of the primary challenges of store automation. However, it has a negative impact.To implement automation systems in a 
+          grocery store, it is essential to carefully plan, integrate, and coordinate with different departments. Managing multiple automation technologies, 
+          such as automated picking systems and robotic delivery centers, requires expertise and careful mechanism. Adding automation systems can be challenging, 
+          especially when trying to balance customer requirements and maintaining operational efficiency. Grocers must carefully analyze their systems, make 
+          strategic investments and adopt a forward-looking approach to adapt to changing market dynamics. <br><br>
+
+          <b>Data threat</b><br><br>
+          In an era when customer data is the most important thing, security plays a crucial role in protecting it. and protection of customer data is 
+          supreme. Automation optimizes various aspects of the grocery shopping experience and requires access to important company and consumer information. 
+          Grocers must implement strong cyber security measures to protect this sensitive information.The implementation of self-service checkouts, mobile 
+          payments, and other automated systems necessitates strict protocols to safeguard customer data and prevent unauthorized access. <br><br>
+
+          <b>Technical issues and maintenance</b><br><br>
+          Incorrect automation is very technology dependent and, like any technology, can be experience .Technical problems and need regular maintenance.To 
+          minimize operational disruptions, grocers must be ready to respond immediately to technical issues. This may require dedicated IT support or 
+          partnerships with automation vendors for technical support and maintenance services. Addressing these issues in a timely manner is critical to 
+          ensuring smooth operations and minimizing negative impacts on the customer experience. <br><br>
+
+          <b>Employee Training</b><br><br>
+          The transformation to grocery automation requires employees to adapt to new technologies and processes. Employees must receive training on how 
+          to operate and maintain automated systems effectively. Grocers may struggle to hire people with the skills or technical expertise of their current 
+          workforce. Additionally, managing employee morale and addressing job security issues during the automation implementation process requires effective 
+          communication and change management strategies.
+        </div>
+        <!-- right side column "image" containing link of image -->
+        <div class="image">
+          <img src="../images/blog-img3.jpg" alt="negative" >
+        </div>
+      </article><br><br><br><br><br><br>
+
+
+      <!-- fourth article "card"  -->
+      <article class="card">
+
+        <!-- left side column "image" containing link of image -->
+        <div class="image">
+          <img src="../images/blog-img4.jpg" alt="how technology" >
+        </div>
+
+        <!-- right side column "content" containing title and description -->
+        <div class="content">
+          <h1 style="text-align:center"><mark>HOW TECHNOLOGY HAS AFFECTED DAILY LIFE AND BUSINESS  SELLING GROCERY ITEMS</mark></h1> <br><br>
+          <p>
+            The Impact of Technology on Grocery Shopping and Delivery Services 
+            Technological advances have impacted grocery stores, supermarkets and related delivery services. Even the consumers who run these companies are 
+            greatly affected by technology. The following are some of the more common ways technology has impacted grocery delivery. <br><br>
+
+            <b>Home Delivery </b><br><br>
+            One of the most common technological influences on grocery and related delivery services is home delivery. Home delivery includes the use of the 
+            customer's digital platform. The merchant receives the order at his administrative office. This order is then sent digitally to distribution agents. 
+            Typically, a customer uses technology in the form of mobile apps to locate their order and communicate with the retailer. This technology is now 
+            available at every grocery store in London Ontario. Electronic payments are very popular. <br><br>
+
+            <b>Artificial Intelligence </b><br><br>
+            Artificial intelligence technology has also impacted grocery stores around the world. It's artificial intelligence technology that recognizes the 
+            products people put in their carts, so they don't have to wait until they can make a purchase. This technology reads the product information and 
+            charges the customer according to the price of the product. <br><br>
+
+            <b>Voice Ordering</b><br><br>
+            Grocery stores have voice ordering technology. In fact, 20 percent of people currently shopping in grocery stores have used voice ordering technology.  
+            An example of such technology is the HKU refrigerator, which is a Wi-Fi enabled refrigerator that can listen to customer orders. It can add items like 
+            milk and bread to the customer's shopping cart. It is equipped with a barcode reader so that each item selected by the customer remains in the grocery 
+            store's system. <br><br>
+
+            <b>Concept of step-out </b><br><br>
+            Customers no longer have to stand in long queues to get the accessories they need. The Amazon Go store  offers such an experience. It uses a QR code 
+            on each product, which the customer can simply scan and then collect their product at home by interacting with the Amazon app and the store's payment 
+            technology. The store is secured to prevent unauthorized collection. Distribution agents can also use these types of stores as delivery points. <br><br>
+          </p>
+        </div>
+      </article><br><br><br><br><br><br>
+
+      <!-- fifth article "card" -->
+      <article class="card">
+        <!-- left side column "content" containing title and description -->
+        <div class="content">
+          <h1 style="text-align:left"><mark>OVERALL CONCLUSION</mark></h1> <br><br>
+          <p>Technology has revolutionized online food and grocery shopping. Technology controls almost every food and grocery delivery industry. Technology has 
+            also influenced changes in customer buying habits and people's product choices. The distribution business is becoming faster and more efficient. Today, 
+            technology offers on-demand grocery delivery services, as well as same-day grocery pickup and delivery. Technology also has negative effects such as 
+            complexity and scalability of operations, risk to customer data, technical problems and maintenance, etc. So, we need to be careful when shopping online.
+          </p><br><br>
+        </div>
+
+        <!-- right side column "image" containing link of image -->
+        <div class="image">
+          <img style="height: 400px;" src="../images/blog-img5.jpg" alt="conclusion">
+        </div>
+      </article>
+    </main>
+
+    <!--footer tag-->
+    <footer>
+      <div class="footer-content">
+        <div class="logo">
+          <img style="margin-top: 36px;" width="100px" src="../images/logo.png" alt="Website Logo">
+        </div>
+          
+        <div class="f-About-us">
+          <h3>About Us</h3>
+          <p>
+            Sabji Mandu Supermarket is a family-operated and owned premier grocery chain in Nepal.
+            We carry fresh produce, fruits and vegetables with a wide selection of groceries 
+          </p>
+        </div>
+
+        <div class="f-contact-us">
+          <h3>Contact Us</h3>
+          <p>Location: Kamalpokhari, Kathmandu, Nepal</p>
+          <p>Email: sabjimandu@gmail.com<br>Phone: +1234567890</p>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-reddit"></i>
+        </div>
+
+        <div class="f-links">
+          <h3>Useful Links</h3>
+          <a href="../index.html">>>Home</a><br>
+          <a href="product.html">>>Product</a><br>
+          <a href="research.html">>>Research</a><br>
+          <a href="blog.html">>>Blog</a><br>
+          <a href="about-us.html">>>About Us</a><br>
+        </div>
+          
+      </div>
+
+      <div class="footer-bottom" style="text-align: center; margin-top: 30px;">
+        <p>&copy; 2024 Sabji-Mandu. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

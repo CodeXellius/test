@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist</title>
+
+  <!-- font from fontAwesome -->
+  <script src="https://kit.fontawesome.com/358c62a0eb.js" crossorigin="anonymous"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .wishlist-page{
+      min-height: 100vh;
+      margin-top: 90px;
+    }
+    #product-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .product-details{
+      margin-top: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 30px;
+      transition: transform ease-in-out 1s;
+    }
+
+    .product-image-section{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 350px;
+      background-color: hsl(39, 100%, 59%);
+    }
+
+    .fa-heart{
+      font-size: 20px;
+    }
+    
+    .red{
+      color: red;
+    }
+
+    .wishlist-button{
+      position:absolute;
+      top: 0;
+      right: 0;
+
+      border: none;
+      margin: 10px;
+      
+      background-color: hsl(39, 100%, 59%);
+    }
+    .wishlist-button:hover{
+      cursor: pointer;
+    }
+    .wishlist-tooltip{
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.646);
+      color: white;
+      top: 30px;
+      right: -32px;
+      width: 90px;
+      opacity: 0;
+      transition: opacity .3s;
+      pointer-events: none;
+    }
+    .wishlist-button:hover .wishlist-tooltip{
+      opacity: 1;
+    }
+
+    .image{
+      width: 300px;
+      height: 250px;
+      object-fit: contain;
+    }
+
+    .product-description{
+      background-color: hsl(0, 8%, 29%);
+      color: white;
+      padding: 10px;
+    }
+
+    .product-title,.product-price{
+      height: 40px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <nav> <!--This is a navigation bar for the website-->
+
+    <div class="left-section">
+      <img class="website-logo" src="../images/logo.png" alt="sabji-mandu logo">
+    </div>
+
+    <div class="middle-section">
+      <a class="header" href="../index.html"> Home </a>
+      <a class="header" href="product.html"> Product </a>
+      <a class="header" href="blog.html"> Blog </a>
+      <a class="header" href="research.html"> Research </a>
+      <a class="header" href="about-us.html"> About Us </a>
+    </div>
+    
+    <div class="right-section">
+      <!--Wish-list icon for header-->
+      <a class=" wishlist header-icon" style=" color: hsl(0, 92%, 39%);" href="wishlist.html">
+        <i class="fa-solid fa-heart" style="font-size: 16px;"></i>
+      </a>
+      
+      <!--Add to cart icon for header-->
+      <a class="header-icon cartTab cart" href="cart.html">
+        <i class="fa-solid fa-cart-shopping" style="font-size: 16px;"></i>
+      </a>
+
+      <!--login and signin buttons for header-->
+      <a class="header-buttons" href="log-in.html">Log In</a>
+      <a class="header-buttons" href="sign-up.html">Sign Up</a>
+    
+    </div> 
+  </nav>
+
+  <!-- Filtered Wishlist Items are displayed through here -->
+  <div class="wishlist-page">
+    <div id="product-grid">
+    </div>
+  </div>
+
+<!--footer tag-->
+<footer>
+  <div class="footer-content">
+    <div class="logo">
+      <img style="margin-top: 36px;" width="100px" src="../images/logo.png" alt="Website Logo">
+    </div>
+      
+    <div class="f-About-us">
+      <h3>About Us</h3>
+      <p>
+        Sabji Mandu Supermarket is a family-operated and owned premier grocery chain in Nepal.
+        We carry fresh produce, fruits and vegetables with a wide selection of groceries 
+      </p>
+    </div>
+
+    <div class="f-contact-us">
+      <h3>Contact Us</h3>
+      <p>Location: Kamalpokhari, Kathmandu, Nepal</p>
+      <p>Email: sabjimandu@gmail.com<br>Phone: +1234567890</p>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-reddit"></i>
+    </div>
+
+    <div class="f-links">
+      <h3>Useful Links</h3>
+      <a href="../index.html">>>Home</a><br>
+      <a href="product.html">>>Product</a><br>
+      <a href="research.html">>>Research</a><br>
+      <a href="blog.html">>>Blog</a><br>
+      <a href="about-us.html">>>About Us</a><br>
+    </div>
+      
+  </div>
+
+  <div class="footer-bottom" style="text-align: center; margin-top: 30px;">
+    <p>&copy; 2024 Sabji-Mandu. All rights reserved.</p>
+  </div>
+  </footer>
+  
+    <script src="../java-script/wishlist.js"></script>
+</body>
+</html>

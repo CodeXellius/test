@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+
+  <!-- Font from FontAwesome -->
+  <script src="https://kit.fontawesome.com/358c62a0eb.js" crossorigin="anonymous"></script>
+  <!-- Link of the Wishlist symbol -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Search font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <style>
+    /* Search bar */
+    .search-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .search {
+      margin: 30px 0px;
+      width: 60%;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      padding: 4px;
+      border-radius: 10px;
+      border: 2px solid black;
+    }
+
+    .search-input {
+      flex: 1;
+      font-size: 18px;
+      color: #000000;
+      margin-left: 14px;
+      outline: none;
+      border: none;
+      background: transparent;
+    }
+  
+    .search-input::placeholder,
+    .search-icon {
+      font-size: smaller;
+      color: rgba(0, 0, 0, 0.497);
+    }
+
+    /* PRODUCT DETAILS GRID */
+    #product-grid,
+    #product-vegetable,
+    #product-dairy,
+    #product-fruit,
+    #product-essentials,
+    #product-instant {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .product-details {
+      margin-top: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 30px;
+    }
+
+    .product-image-section {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 350px;
+      background-color: #EFEFD0;
+    }
+
+    .fa-heart {
+      font-size: 20px;
+    }
+    
+    .red {
+      color: red;
+    }
+
+    .wishlist-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
+      margin: 10px;
+    }
+
+    .wishlist-button:hover {
+      cursor: pointer;
+    }
+
+    .wishlist-tooltip {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.646);
+      color: white;
+      top: 30px;
+      right: -32px;
+      padding: 8px;
+      opacity: 0;
+      transition: opacity .3s;
+      pointer-events: none;
+    }
+
+    .wishlist-button:hover .wishlist-tooltip {
+      opacity: 1;
+    }
+
+    .image {
+      width: 300px;
+      height: 250px;
+      object-fit: contain;
+    }
+
+    .product-description {
+      background-color: hsl(0, 3%, 44%);
+      color: white;
+      padding: 10px;
+    }
+
+    .product-title,
+    .product-price,
+    .new-product-price {
+      height: 40px;
+      font-weight: bold;
+    }
+
+    .buy-options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .buy-button {
+      padding: 6px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      background-color: #EFEFD0;
+      color: black;
+      transition: all ease-in-out 0.3s, padding 0.3s;
+    }
+
+    .buy-button:hover {
+      background-color: #397852;
+      color: white;
+      padding-top: 4px;
+      padding-bottom: 8px;
+      cursor: pointer;
+    }
+
+    .cartTab {
+      position: relative;
+    }
+
+    #noInCart {
+      padding: 3px;
+      height: 1rem;
+      aspect-ratio: 1;
+      position: absolute;
+      color: white;
+      font-size: smaller;
+      background-color: red;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      top: -0.8rem;
+      right: -0.2rem;
+    }
+
+    .notification {
+      height: 50px;
+      display: grid;
+      place-items: center;
+      width: 200px;
+      position: fixed;
+      z-index: 100;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.838);
+      color: white;
+      font-weight: bolder;
+      border-radius: .5rem;
+      box-shadow: 0px 3px 5px #0005;
+      opacity: 0;
+      animation: popup 1s linear 1;
+    }
+
+    @keyframes popup {
+      0% {
+        opacity: 0;
+        bottom: 10rem;
+      }
+      30% {
+        opacity: 1;
+        bottom: 10rem;
+      }
+      70% {
+        opacity: 1;
+        bottom: 10rem;
+      }
+      90% {
+        opacity: 0;
+        bottom: 10rem;
+      }
+      100% {
+        opacity: 0;
+        bottom: 0;
+      }
+    }
+
+    /* For video slider styles */
+    .video-container {
+      margin-top: -12px;
+      padding-top: 2px;
+      overflow: hidden;
+      height: 500px;
+    }
+
+    video {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Navigation tab and on sale products */
+    .sales {
+      display: flex;
+      margin: 20px;
+    }
+
+
+    /* Navigation tab */
+    .link {
+      font-size: 25px;
+      font-weight: bolder;
+      margin-top: -40px;
+      margin-left: -14px;
+      padding: 10px 16px;
+      background-color: #bbcf8d;
+      width: 320px;
+      border-radius: 8px;
+    }
+
+    /* On Sale items main div */
+    #on-sale {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      overflow: scroll;
+    }
+
+    .sale_info {
+      flex: 1;
+    }
+
+    .onsale,
+    .headings {
+      font-family: "Nunito Sans", arial;
+      font-weight: 700;
+      margin-top: 16px;
+      margin-bottom: -16px;
+      color: black;
+      font-size: xx-large;
+    }
+
+    .onsale {
+      color: red;
+      margin-left: 370px;
+    }
+
+    .headings {
+      margin-left: 24px;
+    }
+  </style>
+</head>
+
+<body id="body">
+
+  <nav>
+    <!-- This is a navigation bar for the website -->
+    <div class="left-section">
+      <img class="website-logo" src="../images/logo.png" alt="sabji-mandu logo">
+    </div>
+
+    <div class="middle-section">
+      <a class="header" href="../index.html"> Home </a>
+      <a class="header" href="product.html" style="color: white; border: 2px solid white;"> Product </a>
+      <a class="header" href="blog.html"> Blog </a>
+      <a class="header" href="research.html"> Research </a>
+      <a class="header" href="about-us.html"> About Us </a>
+    </div>
+    
+    <div class="right-section">
+      <!-- Wishlist icon for header -->
+      <a class="wishlist header-icon" href="wishlist.html">
+        <i class="fa-solid fa-heart" style="font-size: 16px;"></i>
+      </a>
+      
+      <!-- Add to cart icon for header -->
+      <a class="header-icon cartTab cart" href="cart.html">
+        <i class="fa-solid fa-cart-shopping" style="font-size: 16px;"></i>
+
+        <!-- Notification for cart icon... refer to product.js -->
+        <div id="noInCart"></div>
+      </a>
+
+      <!-- Login and sign-up buttons for header -->
+      <a class="header-buttons" href="log-in.html">Log In</a>
+      <a class="header-buttons" href="sign-up.html">Sign Up</a>
+    </div> 
+  </nav>
+
+  <!-- Video Slider -->
+  <main class="video-container">
+    <div id="video">
+      <video src="../video/tomato.mp4" muted autoplay></video>
+    </div>
+  </main>
+
+  <!-- On sales item to display using flex -->
+  <p class="onsale">ITEMS ON SALE</p>
+  <div class="sales">
+    <div class="link">
+      <p>Navigation</p>
+      <!-- Search bar -->
+      <div class="search">
+        <span class="search-icon material-symbols-outlined">Search</span>
+        <input class="search-input" type="search" placeholder="Search for Products">
+      </div>
+      
+      <a href="#allitems">All Items</a><br>
+      <a href="#vegetables">Vegetables</a><br>
+      <a href="#dairy">Dairy</a><br>
+      <a href="#fruit">Fruits</a><br>
+      <a href="#essentials">Cooking Essentials</a><br>
+      <a href="#instant">Instant Food</a><br>
+    </div>
+    <!-- Product filtered by On Sale -->
+    <div id="on-sale"></div>
+  </div>
+
+  <p id="allitems" class="headings">ALL ITEMS</p>
+
+  <!-- Product Grid to display product details -->
+  <div id="product-grid">
+    
+  </div>
+
+  <!-- Product categorized by vegetables type -->
+  <p id="vegetables" class="headings">Vegetables</p>
+  <div id="product-vegetable"></div>
+
+  <!-- Product categorized by dairy type -->
+  <p id="dairy" class="headings">Dairy Products</p>
+  <div id="product-dairy"></div>
+
+  <!-- Product categorized by fruits type -->
+  <p id="fruit" class="headings">Fruits</p>
+  <div id="product-fruit"></div>
+
+  <!-- Product categorized by cooking essentials type -->
+  <p id="essentials" class="headings">Cooking Essentials</p>
+  <div id="product-essentials"></div>
+
+  <!-- Product categorized by instant food type -->
+  <p id="instant" class="headings">Instant Food</p>
+  <div id="product-instant"></div>
+
+  <!-- Footer tag -->
+  <footer>
+    <div class="footer-content">
+      <div class="logo">
+        <img style="margin-top: 36px;" width="100px" src="../images/logo.png" alt="Website Logo">
+      </div>
+      
+      <div class="f-About-us">
+        <h3>About Us</h3>
+        <p>
+          Sabji Mandu Supermarket is a family-operated and owned premier grocery chain in Nepal.
+          We carry fresh produce, fruits and vegetables with a wide selection of groceries.
+        </p>
+      </div>
+
+      <div class="f-contact-us">
+        <h3>Contact Us</h3>
+        <p>Location: Kamalpokhari, Kathmandu, Nepal</p>
+        <p>Email: sabjimandu@gmail.com<br>Phone: +1234567890</p>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-reddit"></i>
+      </div>
+
+      <div class="f-links">
+        <h3>Useful Links</h3>
+        <a href="../index.html">>>Home</a><br>
+        <a href="product.html">>>Product</a><br>
+        <a href="research.html">>>Research</a><br>
+        <a href="blog.html">>>Blog</a><br>
+        <a href="about-us.html">>>About Us</a><br>
+      </div>
+    </div>
+
+    <div class="footer-bottom" style="text-align: center; margin-top: 30px;">
+      <p>&copy; 2024 Sabji-Mandu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="../java-script/product.js"></script>
+
+</body>
+</html>

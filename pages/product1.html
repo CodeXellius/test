@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potato</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <style>
+    main {
+      min-width: 100vh;
+      padding: 80px;
+      background-color: white;
+    }
+    .product{
+      margin-top: -40px;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1em;
+    } 
+
+    .product-image{
+        object-fit: contain;
+        max-width: 50%;
+        border-radius: 8px;
+    }
+
+    .product-description {
+        flex: 1;
+        flex-direction: row;
+    }
+
+    .buy-options button{
+      margin-top: 10px;
+      margin-bottom: 4px;
+      margin-right: 10px;
+      padding: 12px;
+      width: 100px;
+      background-color: hsl(131, 66%, 21%);
+      color: whitesmoke;
+      border-radius: 8px;
+      transition: all ease 0.2s;
+      border: none;
+    }
+    .buy-options button:hover{
+      background-color: rgb(0, 0, 0);
+      transform: translateY(-3px);
+      cursor: pointer;
+    }
+    .buy-options button:active{
+      background-color: hsl(0, 72%, 53%);
+    }
+
+    .product-reviews article {
+        border-bottom: 2px solid #100f0f;
+        padding: 1em 0;
+    }
+    
+    .product-features, .product-reviews {
+        margin-top: 2em;  
+    }
+
+    .product-quantity {
+        margin: 1em 0;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .product-quantity input {
+      margin-left: 10px;
+      width: 40px;
+      padding: 2px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <nav> <!--This is a navigation bar for the website-->
+
+    <div class="left-section">
+      <img class="website-logo" src="../images/logo.png" alt="sabji-mandu logo">
+    </div>
+
+    <div class="middle-section">
+      <a class="header" href="../index.html"> Home </a>
+      <a class="header" href="product.html" style=" color: white; border: 2px solid white;"> Product </a>
+      <a class="header" href="blog.html" > Blog </a>
+      <a class="header" href="research.html"> Research </a>
+      <a class="header" href="about-us.html"> About Us </a>
+    </div>
+    
+    
+    <div class="right-section">
+      <!--login and signin buttons for header-->
+      <a class="header-buttons" href="log-in.html">Log In</a>
+      <a class="header-buttons" href="sign-up.html ">Sign Up</a>
+      
+    </div> 
+  </nav>
+
+  <main class="product-page">
+    <h1 class="product">Fresh and organic potatoes</h1>
+    <section class="product-container">
+      <img class="product-image" src="../images/potato.png" alt="potato">
+      <div class="product-description" style="font-size: 16px;">
+        <h1>Description</h1>
+        <p>Discover the pure, natural taste of our fresh, organic potatoes. Grown sustainably and without chemicals, 
+          these potatoes are packed with flavor and nutrients. Choose from a variety of types, all hand-selected for 
+          freshness. Perfect for any recipe, our potatoes bring wholesome goodness to your table.
+        </p>
+        <div class="product-quantity">
+          <p>Quantity: </p>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+        <p style="font-size: xx-small; color: gray;" >(All Tax Included)</p>
+        <p>$ 30</p>
+        <div class="buy-options">
+          <button>Buy</button>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+    </section>
+
+    <section class="product-features" style="margin-left: 16px;">
+      <h2 style="margin-left: -16px;">Product Features</h2>
+      <ol>
+        <li> Each potato is carefully selected to ensure uniformity, providing a reliable cooking experience every time. </li>
+        <li> Choose from a range of potato types, including russets, reds, yellows, and more, to suit your culinary preferences and recipes. </li>
+        <li> Our potatoes are harvested at peak ripeness and stored using optimal techniques to maintain freshness for longer periods. </li>
+        <li> Packed with essential vitamins, minerals, and dietary fiber, our potatoes offer a nutritious addition to any meal. </li>
+        <li> Whether mashed, roasted, baked, or fried, our potatoes lend themselves to a variety of delicious dishes, making them a versatile staple in any kitchen. </li>
+      </ol>
+    </section>
+
+    <section class="product-reviews">
+      <h2>Reviews</h2>
+      <article>
+        <h3>John Smith</h3>
+        <p>★★★★</p>
+        <p>
+          These potatoes are fantastic! They cook up beautifully and have a delicious flavor. The only downside is that some 
+          of them were smaller than expected.
+        </p>
+      </article>
+      <article>
+        <h3>Emily Johnson</h3>
+        <p>★★★★★</p>
+        <p>I'm really impressed with the quality of these potatoes. They are so fresh and versatile. Whether I'm making mashed 
+          potatoes or oven-roasted wedges, they always turn out delicious!
+        </p>
+      </article>
+    </section>
+</main>
+<!--footer tag-->
+<footer>
+  <div class="footer-content">
+    <div class="logo">
+      <img style="margin-top: 36px;" width="100px" src="../images/logo.png" alt="Website Logo">
+    </div>
+      
+    <div class="f-About-us">
+      <h3>About Us</h3>
+      <p>
+        Sabji Mandu Supermarket is a family-operated and owned premier grocery chain in Nepal.
+        We carry fresh produce, fruits and vegetables with a wide selection of groceries 
+      </p>
+    </div>
+
+    <div class="f-contact-us">
+      <h3>Contact Us</h3>
+      <p>Location: Kamalpokhari, Kathmandu, Nepal</p>
+      <p>Email: sabjimandu@gmail.com<br>Phone: +1234567890</p>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-reddit"></i>
+    </div>
+
+    <div class="f-links">
+      <h3>Useful Links</h3>
+      <a href="../index.html">>>Home</a><br>
+      <a href="product.html">>>Product</a><br>
+      <a href="research.html">>>Research</a><br>
+      <a href="blog.html">>>Blog</a><br>
+      <a href="about-us.html">>>About Us</a><br>
+    </div>
+      
+  </div>
+
+  <div class="footer-bottom" style="text-align: center; margin-top: 30px;">
+    <p>&copy; 2024 Sabji-Mandu. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

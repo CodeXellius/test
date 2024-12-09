@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potato Chips</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <style>
+    main {
+      min-width: 100vh;
+      padding: 80px;
+      background-color: white;
+    }
+    .product{
+      margin-top: -40px;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1em;
+    } 
+
+    .product-image{
+        max-width: 50%;
+        object-fit: contain;
+        background-color: hsl(180, 45%, 94%);
+        border-radius: 8px;
+    }
+
+    .product-description {
+        flex: 1;
+        flex-direction: row;
+    }
+
+    .buy-options button{
+      margin-top: 10px;
+      margin-bottom: 4px;
+      margin-right: 10px;
+      padding: 12px;
+      width: 100px;
+      background-color: hsl(131, 66%, 21%);
+      color: whitesmoke;
+      border-radius: 8px;
+      transition: all ease 0.2s;
+      border: none;
+    }
+    .buy-options button:hover{
+      background-color: rgb(0, 0, 0);
+      transform: translateY(-3px);
+      cursor: pointer;
+    }
+    .buy-options button:active{
+      background-color: hsl(0, 72%, 53%);
+    }
+
+    .product-reviews article {
+        border-bottom: 2px solid #100f0f;
+        padding: 1em 0;
+    }
+    
+    .product-features, .product-reviews {
+        margin-top: 2em;  
+    }
+
+    .product-quantity {
+        margin: 1em 0;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .product-quantity input {
+      margin-left: 10px;
+      width: 40px;
+      padding: 2px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <!--This is a navigation bar for the website-->
+  <nav> 
+
+    <div class="left-section">
+      <img class="website-logo" src="../images/logo.png" alt="sabji-mandu logo">
+    </div>
+
+    <div class="middle-section">
+      <a class="header" href="../index.html"> Home </a>
+      <a class="header" href="product.html" style=" color: white; border: 2px solid white;"> Product </a>
+      <a class="header" href="blog.html"> Blog </a>
+      <a class="header" href="research.html"> Research </a>
+      <a class="header" href="about-us.html"> About Us </a>
+    </div>
+    
+    
+    <div class="right-section">
+      <!--login and signin buttons for header-->
+      <a class="header-buttons" href="log-in.html">Log In</a>
+      <a class="header-buttons" href="sign-up.html ">Sign Up</a>
+      
+    </div> 
+  </nav>
+
+  <main class="product-page">
+    <h1 class="product">Crunchy Tomato Flavoured Lay's chips</h1>
+    <section class="product-container">
+      <img class="product-image" src="../images/tomato-lays.png" alt="potato">
+      <div class="product-description" style="font-size: 16px;">
+        <h1>Description</h1>
+        <p>
+          Indulge in the irresistible taste of our tomato lays, crafted with care to deliver a burst of natural flavors. 
+          Made from premium tomatoes cultivated sustainably and without artificial additives, our tomato lays are a deliciously 
+          wholesome snack option. Explore our range of enticing flavors, each meticulously chosen for its quality and taste. Whether 
+          you're snacking solo or sharing with friends, our tomato lays promise to elevate your taste experience with every crispy 
+          bite. Embrace the goodness of nature in every pack, perfect for satisfying cravings and enjoying guilt-free moments of delight.
+        </p>
+        <div class="product-quantity">
+          <p>Quantity: </p>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+        <p style="font-size: xx-small; color: gray;" >(All Tax Included)</p>
+        <p>$ 30</p>
+        <div class="buy-options">
+          <button>Buy</button>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+    </section>
+
+    <section class="product-features" style="margin-left: 16px;">
+      <h2 style="margin-left: -16px;">Product Features</h2>
+      <ol>
+        <li> Each tomato used in our lays is carefully selected to ensure quality and taste consistency, guaranteeing a delightful snacking experience every time. </li>
+        <li> Enjoy a variety of flavors, including classic, spicy, tangy, and more, to cater to your taste preferences and cravings. </li>
+        <li> Our tomatoes are sourced from trusted farms and processed using advanced techniques to preserve their freshness and flavor for longer durations. </li>
+        <li> Packed with essential nutrients like vitamins A and C, as well as antioxidants, our tomato lays offer a flavorful and wholesome snacking option. </li>
+        <li> Whether enjoyed on their own or paired with your favorite dips, our tomato lays are perfect for any occasion, providing a satisfying crunch and burst of flavor with every bite. </li>
+      </ol>
+    </section>
+    
+    <section class="product-reviews">
+      <h2>Reviews</h2>
+      <article>
+        <h3>Shambhavi Bhusal</h3>
+        <p>★★★★</p>
+        <p>
+          These tomato lays are quite tasty! I love the tanginess of the classic flavor. However, the spicy variant could be spicier for my taste.
+        </p>
+      </article>
+      <article>
+        <h3>Sampanna Bhusal</h3>
+        <p>★★★★★</p>
+        <p>These tomato lays are my absolute favorite snack! I can't get enough of the tangy flavor, and the crunch is just perfect. Plus, they're a healthier option compared to other snacks.</p>
+      </article>
+    </section>
+    
+</main>
+<!--footer tag-->
+<footer>
+  <div class="footer-content">
+    <div class="logo">
+      <img style="margin-top: 36px;" width="100px" src="../images/logo.png" alt="Website Logo">
+    </div>
+      
+    <div class="f-About-us">
+      <h3>About Us</h3>
+      <p>
+        Sabji Mandu Supermarket is a family-operated and owned premier grocery chain in Nepal.
+        We carry fresh produce, fruits and vegetables with a wide selection of groceries 
+      </p>
+    </div>
+
+    <div class="f-contact-us">
+      <h3>Contact Us</h3>
+      <p>Location: Kamalpokhari, Kathmandu, Nepal</p>
+      <p>Email: sabjimandu@gmail.com<br>Phone: +1234567890</p>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-reddit"></i>
+    </div>
+
+    <div class="f-links">
+      <h3>Useful Links</h3>
+      <a href="../index.html">>>Home</a><br>
+      <a href="product.html">>>Product</a><br>
+      <a href="research.html">>>Research</a><br>
+      <a href="blog.html">>>Blog</a><br>
+      <a href="about-us.html">>>About Us</a><br>
+    </div>
+      
+  </div>
+
+  <div class="footer-bottom" style="text-align: center; margin-top: 30px;">
+    <p>&copy; 2024 Sabji-Mandu. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

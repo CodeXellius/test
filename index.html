@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabji-Mandu</title>
+
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+  
+    <!--Font from FontAwesome-->
+    <script src="https://kit.fontawesome.com/358c62a0eb.js" crossorigin="anonymous"></script>
+    <!--Link of the Whishlist symbol-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
+
+<style>
+
+/*Resizing the video to height 600px*/
+ .video-container {
+  position: relative;
+  margin-top: -10px;
+  width: 100%;
+  height: 600px; 
+  overflow: hidden;
+}
+.video-container video {
+  position: absolute;
+  bottom: -250px;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.container{
+    margin:0;
+    padding:50px 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/*sets image width
+sets image height
+the radius of corner of border
+border thickness
+margin with right side*/
+.container img{
+    width:350px;
+    height:400px;
+    margin-right:20px;
+    object-fit: contain;
+}
+/*max width of text*/
+.text{
+    max-width:50%;
+}
+/*title size
+padding around*/
+.text h2{
+    font-size:50px;
+}
+/*font size of description*/
+.text p {
+    font-size:18px;
+}
+
+/*setting the background color for the products */
+
+.containerone{
+    background-color: #f7bd66;
+}
+
+.containertwo{
+    background-color: #f7dadb;
+}
+
+.containerthree{
+    background-color: #a6c6ec;
+}
+
+.containerfour{
+    background-color: #ccf371;
+}
+
+.containerfive{
+    background-color: #9ea9aa;
+}
+
+/* order button style */
+/*creates boxes automatically wrap text and other content to give them space
+padding top, right
+sets bg color
+removes text decorations if any
+radius of the corner of the border
+sets margin on top
+transition with duration 0.3s
+*/
+.btn{
+    display:inline-block;
+    padding: 10px 20px;
+    color: black;
+    background-color: #fd0054;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top:20px;
+    transition: all ease 0.3s;
+}
+/*changes the color when hovered on the button*/
+.btn:hover {
+  background-color: rgb(189, 218, 22)8a;
+  color: white;
+}
+
+/*aligns the text
+padding top,right
+*/
+.partnered-brands {
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+/*sets font size
+sets margin on bottom
+*/
+.partnered-brands h2{
+    font-size: 45px;
+    margin-bottom: 20px;   
+}
+/*
+allows easy alignment and distribution of elements
+distributes the element with equal spaces around
+*/
+.partnered-brands-container{
+    display:flex;
+    justify-content: space-around;
+}
+/*sets width*/
+.partner{
+    width: 25%;
+}
+/*sets width
+sets automatically according to the content
+sets the border radius
+indicates the image is clickable*/
+.partner img{
+    width: 80%;
+    height:auto;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+
+  </style>
+  
+</head>
+<body>
+
+  <nav> <!--This is a navigation bar for the website-->
+
+    <div class="left-section">
+      <img class="website-logo" src="images/logo.png" alt="sabji-mandu logo">
+    </div>
+
+    <div class="middle-section">
+      <a class="header" href="../index.html" style=" color: white; border: 2px solid white;"> Home </a>
+      <a class="header" href="pages/product.html"> Product </a>
+      <a class="header" href="pages/blog.html"> Blog </a>
+      <a class="header" href="pages/research.html"> Research </a>
+      <a class="header" href="pages/about-us.html"> About Us </a>
+    </div>
+    
+    <div class="right-section">
+      <!--Wish-list icon for header-->
+      <a class=" wishlist header-icon" href="pages/wishlist.html">
+        <i class="fa-solid fa-heart" style="font-size: 16px;"></i>
+      </a>
+      
+      <!--Add to cart icon for header-->
+      <a class="header-icon cartTab cart" href="pages/cart.html">
+        <i class="fa-solid fa-cart-shopping" style="font-size: 16px;"></i>
+
+        <!--Notification for cart icon... refer to js file-->
+        <div id="noInCart">
+          
+        </div>
+      </a>
+
+      <!--login and signin buttons for header-->
+      <a class="header-buttons" href="pages/log-in.html">Log In</a>
+      <a class="header-buttons" href="pages/sign-up.html">Sign Up</a>
+    </div> 
+  </nav>
+
+  <!--The introductive video of our store... tag video has been used with autoplay. -->
+  <div class="video-container">
+    <video autoplay loop muted src="video/SabjiManduvideo.mp4" width="100%" ></video>
+  </div>
+
+    <!--Products section-->
+    <!--For the products section different types of division has been created and the products has been listed with the use of proper image tags.-->
+    <div class="container containerone">
+        <img src="images/home1.webp" alt="Vegetables">
+        <div class="text">
+            <h2>"FEEL FRESH SHOP FRESH"</h2>
+            <p style="padding-left: 5px;"> "Discover the pure essence of freshness with Sabji Mandu's farm-fresh, organic vegetables sourced directly from Nepal.<br> Taste the difference today!"</p>
+            <a href="pages/product.html#vegetables" class="btn">Order Now</a>
+        </div>
+    </div>
+
+    <div class="container containertwo">
+        <div class="text">
+            <h2>"JUICIEST FRUITS OF THE SEASON!"</h2>
+            <p>"Indulge in the pure goodness of organic fruits. From juicy berries to crisp apples, savor nature's finest with every bite."</p>
+            <a href="pages/product.html#fruit" class="btn">Order Now</a>
+        </div>
+        <img src="images/home2.jpg" alt="">
+    </div>
+
+    <div class="container containerthree">
+        <img src="images/home3.jpg" alt="">
+        <div class="text">
+            <h2>"QUICK, EASY, AND IRRESISTIBLY TASTY!"</h2>
+            <p>"Indulge in quick and tasty delights with our tempting instant foods! Satisfy your cravings in a flash."</p>
+            <a href="pages/product.html#instant" class="btn">Order Now</a>
+        </div>
+    </div>
+
+    <div class="container containerfour">
+        <div class="text">
+            <h2>"ENHANCE EVERY DISH WITH OUR PREMIUM COOKING ESSENTIALS"</h2>
+            <p>"Unlock gourmet possibilities with our premium cooking products. Elevate every dish to a culinary masterpiece!"</p>
+            <a href="pages/product.html#essentials" class="btn">Order Now</a>
+        </div>
+        <img src="images/home4.jpg" alt="">
+    </div>
+
+    <div class="container containerfive">
+        <img src="images/home5.webp" alt="">
+        <div class="text">
+            <h2>"WHOLESOME GOODNESS IN  EVERY SLURP AND BITE"</h2>
+            <p>Indulge in creamy delights! Taste the pure goodness of our dairy products. Pure, fresh, and simply delicious.</p>
+            <a href="pages/product.html#dairy" class="btn">Order Now</a>
+        </div>
+    </div>
+
+    <!-- for the section for our partenered brands different classes is used and link of official sites of brands has been used so that if user 
+      clicks on the image the website opens. -->
+    <div class="partnered-brands">
+        <h2>OUR PARTNERED BRANDS</h2>
+        <div class="partnered-brands-container">
+    <div class="partner">
+        <a href="https://www.chaudharygroup.com/foods" target="_blank">
+            <img src="images/CG.png" alt="Brand 1">
+        </a>
+    </div>
+    <div class="partner">
+        <a href="https://trivenigroup.com.np/" target="_blank">
+            <img src="images/triveni.png" alt="Brand 1">
+        </a>
+    </div>
+    <div class="partner">
+        <a href="https://www.dabur.com/" target="_blank">
+            <img src="images/Dabur Nepal.png" alt="Brand 1">
+        </a> 
+    </div>  
+        </div>
+    </div>
+
+    <!--footer tag-->
+    <footer>
+      <div class="footer-content">
+        <div class="logo">
+          <img style="margin-top: 36px;" width="100px" src="images/logo.png" alt="Website Logo">
+        </div>
+          
+        <div class="f-About-us">
+          <h3>About Us</h3>
+          <p>
+            Sabji Mandu Supermarket is a family-operated and owned premier grocery chain in Nepal.
+            We carry fresh produce, fruits and vegetables with a wide selection of groceries 
+          </p>
+        </div>
+
+        <div class="f-contact-us">
+          <h3>Contact Us</h3>
+          <p>Location: Kamalpokhari, Kathmandu, Nepal</p>
+          <p>Email: sabjimandu@gmail.com<br>Phone: +1234567890</p>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-reddit"></i>
+        </div>
+
+        <div class="f-links">
+          <h3>Useful Links</h3>
+          <a href="index.html">>>Home</a><br>
+          <a href="pages/product.html">>>Product</a><br>
+          <a href="pages/research.html">>>Research</a><br>
+          <a href="pages/blog.html">>>Blog</a><br>
+          <a href="pages/about-us.html">>>About Us</a><br>
+        </div>
+          
+      </div>
+
+      <div class="footer-bottom" style="text-align: center; margin-top: 30px;">
+        <p>&copy; 2024 Sabji-Mandu. All rights reserved.</p>
+      </div>
+   </footer>
+</body>
+</html>

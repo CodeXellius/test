@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basmati Rice</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <style>
+    main {
+      min-width: 100vh;
+      padding: 80px;
+      background-color: white;
+    }
+    .product{
+      margin-top: -40px;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1em;
+    } 
+
+    .product-image{
+        max-width: 50%;
+        object-fit: contain;
+        background-color: hsl(180, 45%, 94%);
+        border-radius: 8px;
+    }
+
+    .product-description {
+        flex: 1;
+        flex-direction: row;
+    }
+
+    .buy-options button{
+      margin-top: 10px;
+      margin-bottom: 4px;
+      margin-right: 10px;
+      padding: 12px;
+      width: 100px;
+      background-color: hsl(131, 66%, 21%);
+      color: whitesmoke;
+      border-radius: 8px;
+      transition: all ease 0.2s;
+      border: none;
+    }
+    .buy-options button:hover{
+      background-color: rgb(0, 0, 0);
+      transform: translateY(-3px);
+      cursor: pointer;
+    }
+    .buy-options button:active{
+      background-color: hsl(0, 72%, 53%);
+    }
+
+    .product-reviews article {
+        border-bottom: 2px solid #100f0f;
+        padding: 1em 0;
+    }
+    
+    .product-features, .product-reviews {
+        margin-top: 2em;  
+    }
+
+    .product-quantity {
+        margin: 1em 0;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .product-quantity input {
+      margin-left: 10px;
+      width: 40px;
+      padding: 2px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <nav> <!--This is a navigation bar for the website-->
+
+    <div class="left-section">
+      <img class="website-logo" src="../images/logo.png" alt="sabji-mandu logo">
+    </div>
+
+    <div class="middle-section">
+      <a class="header" href="../index.html"> Home </a>
+      <a class="header" href="product.html" style=" color: white; border: 2px solid white;"> Product </a>
+      <a class="header" href="blog.html"> Blog </a>
+      <a class="header" href="research.html"> Research </a>
+      <a class="header" href="about-us.html"> About Us </a>
+    </div>
+    
+    
+    <div class="right-section">
+      <!--login and signin buttons for header-->
+      <a class="header-buttons" href="log-in.html">Log In</a>
+      <a class="header-buttons" href="sign-up.html ">Sign Up</a>
+      
+    </div> 
+  </nav>
+
+  <main class="product-page">
+    <h1 class="product">Premium Basmati Rice</h1>
+    <section class="product-container">
+      <img class="product-image" src="../images/basmati-rice.png" alt="Basmati Rice">
+      <div class="product-description" style="font-size: 16px;">
+        <h1>Description</h1>
+        <p>
+          Elevate your dining experience with our premium Basmati rice. Sourced from the foothills of the Himalayas, our Basmati rice is renowned for its long grains, delicate aroma, and exquisite flavor. Each grain is carefully aged to perfection, ensuring a fluffy texture and distinct taste in every bite. Whether paired with savory curries, biryanis, or enjoyed on its own, our Basmati rice promises to deliver an authentic culinary experience that will impress even the most discerning palates.
+        </p>
+        <div class="product-quantity">
+          <p>Quantity: </p>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+        <p style="font-size: xx-small; color: gray;" >(All Tax Included)</p>
+        <p>$ 20</p>
+        <div class="buy-options">
+          <button>Buy</button>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+    </section>
+
+    <section class="product-features" style="margin-left: 16px;">
+      <h2 style="margin-left: -16px;">Product Features</h2>
+      <ol>
+        <li> Sourced from the foothills of the Himalayas, our Basmati rice is known for its unparalleled quality and taste. </li>
+        <li> Long-grained and aromatic, our Basmati rice adds an extra dimension of flavor to any dish. </li>
+        <li> Each grain is aged to perfection, resulting in a light and fluffy texture when cooked. </li>
+        <li> Versatile and delicious, our Basmati rice pairs perfectly with a wide range of cuisines, from Indian to Middle Eastern and beyond. </li>
+        <li> Whether served as a side dish or as the star of the meal, our Basmati rice is sure to delight your taste buds with its authentic taste and aroma. </li>
+      </ol>
+    </section>
+    
+    <section class="product-reviews">
+      <h2>Reviews</h2>
+      <article>
+        <h3>Alexander Johnson</h3>
+        <p>★★★★★</p>
+        <p>
+          This Basmati rice is simply the best! The grains cook up perfectly every time, and the aroma is out of this world. It's the only rice I'll ever buy from now on.
+        </p>
+      </article>
+      <article>
+        <h3>Isabella Martinez</h3>
+        <p>★★★★★</p>
+        <p>The quality of this Basmati rice is exceptional! It's so fragrant and flavorful, and it makes the perfect base for all of my favorite dishes. I highly recommend it!</p>
+      </article>
+    </section>
+    
+    <!-- Additional Review -->
+    <article>
+      <h3>Mohammed Khan</h3>
+      <p>★★★★</p>
+      <p>This Basmati rice is really good! I use it to make biryani, and it turns out amazing every time. The grains are long and fluffy, just like they should be.</p>
+    </article>
+</main>
+<!--footer tag-->
+<footer>
+  <div class="footer-content">
+    <div class="logo">
+      <img style="margin-top: 36px;" width="100px" src="../images/logo.png" alt="Website Logo">
+    </div>
+      
+    <div class="f-About-us">
+      <h3>About Us</h3>
+      <p>
+        Sabji Mandu Supermarket is a family-operated and owned premier grocery chain in Nepal.
+        We carry fresh produce, fruits and vegetables with a wide selection of groceries 
+      </p>
+    </div>
+
+    <div class="f-contact-us">
+      <h3>Contact Us</h3>
+      <p>Location: Kamalpokhari, Kathmandu, Nepal</p>
+      <p>Email: sabjimandu@gmail.com<br>Phone: +1234567890</p>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-reddit"></i>
+    </div>
+
+    <div class="f-links">
+      <h3>Useful Links</h3>
+      <a href="../index.html">>>Home</a><br>
+      <a href="product.html">>>Product</a><br>
+      <a href="research.html">>>Research</a><br>
+      <a href="blog.html">>>Blog</a><br>
+      <a href="about-us.html">>>About Us</a><br>
+    </div>
+      
+  </div>
+
+  <div class="footer-bottom" style="text-align: center; margin-top: 30px;">
+    <p>&copy; 2024 Sabji-Mandu. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

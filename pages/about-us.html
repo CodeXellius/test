@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About-Us</title>
+
+  
+  <!--icon from FontAwesome-->
+  <script src="https://kit.fontawesome.com/358c62a0eb.js" crossorigin="anonymous"></script>
+
+  <!-- Font from google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <style>
+    .about-us {
+      padding: 70px 0;
+      padding-top: 50px;
+    }
+
+    .container {
+      margin: 0 auto;
+      padding: 0 20px;
+
+      display: flex;
+      width: 1400px;  
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      align-items: center;
+    }
+
+    .flex {
+      flex: 1;
+      padding: 0 20px;
+    }
+    .flex-new{
+      flex:1;
+      flex-wrap: wrap-reverse;
+      align-items: center;
+      padding-left: 80px;
+    }
+    .flex-new p{
+      margin-right: 50px;
+      text-align: justify;
+    }
+    .flex-new img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .about-us h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .about-us h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #888;
+    }
+
+    .about-us p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: black;
+    }
+
+    .about-us img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-links {
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      margin-right: 10px;
+      color: #555;
+      text-decoration: none;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #3b5998;
+    }
+
+    .team-members {
+    text-align: center;
+    margin-top: 50px;
+    }
+
+    .teamh1 h1 {
+      font-size: 28px;
+      color: #333;
+    }
+
+    .team-pictures {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .val {
+      margin: 15px;
+      width: 200px;
+    }
+    .pic{
+      overflow: hidden;
+    }
+
+    .pic img {
+      height: 250px;
+      border-radius: 10px;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .p1 {
+      margin-top: 10px;
+    }
+
+    h4 {
+      font-size: 20px;
+      color: #555;
+    }
+    
+    .contact-us {
+    margin-top: 30px;
+
+      padding: 30px;
+      border-radius: 10px;
+
+      max-width: 400px;
+      width: 100%;
+    margin-left: 500px;
+    }
+
+    .contact-us h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    .contact-us form {
+      display: grid;
+      grid-gap: 10px;
+    }
+
+    .contact-us label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .contact-us input[type="text"],
+    .contact-us textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 14px;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-us input[type="text"]:focus,
+    .contact-us textarea:focus {
+      border-color: #007bff;
+    }
+
+    .contact-us textarea {
+      height: 120px;
+    }
+
+    .contact-us .new {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+
+    .contact-us button {
+      background-color:#00AC7F;
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-us button:hover {
+      background-color: #0056b3;
+    }
+    .team-members .val {
+      transition: transform 0.3s ease;
+    }
+
+    .team-members .val:hover {
+      transform: scale(1.1);
+    }
+
+    .team-members .val:hover .p1 {
+    color: #333;
+    }
+
+    .button {
+      margin-top: 10px;
+      padding: 4px;
+      background-color: #00AC7F;
+      border-color: transparent;
+      border-radius: 4px;
+    }
+
+    .button:hover{
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+  <body>
+    <nav> <!--This is a navigation bar for the website-->
+
+      <div class="left-section">
+        <img class="website-logo" src="../images/logo.png" alt="sabji-mandu logo">
+      </div>
+
+      <div class="middle-section">
+        <a class="header" href="../index.html"> Home </a>
+        <a class="header" href="product.html"> Product </a>
+        <a class="header" href="blog.html"> Blog </a>
+        <a class="header" href="research.html"> Research </a>
+        <a class="header" href="about-us.html" style=" color: white; border: 2px solid white;"> About Us </a>
+      </div>
+      
+      
+      <div class="right-section">
+        <!--login and signin buttons for header-->
+        <a class="header-buttons" href="log-in.html">Log In</a>
+        <a class="header-buttons" href="sign-up.html ">Sign Up</a>
+        
+      </div> 
+    </nav>
+
+    <div class="about-us">
+      <div class="container">
+        <div class="row">
+          <div class="flex">
+            <img src="../images/aboutus.png" alt="About Us Image">
+          </div>
+          <div class="flex">
+            <h2>About Us</h2>
+            <h3>Sabji Mandu Story</h3>
+            <p>
+              Sabji Mandu Supermarket is a family-operated and owned premier grocery chain in Nepal. 
+              We carry fresh produce, fruits and vegetables with a wide selection of groceries, specialty 
+              groceries, and the largest selections of Indian products anywhere in Nepal. We also carry a 
+              wide range of household utensils and appliances for cooking. It is your local one-stop-shop 
+              where you can tick off all the grocery items off your grocery list. Our products are presented 
+              in an intuitive way which makes it easier for customers to find. 
+            </p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+              <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="about-us">
+      <div class="container">
+        <div class="row">
+          <div class="flex-new">
+            <h2>What we offer?</h2>
+            <p>
+              Our entire business revolves around prioritizing customer happiness. We invest heavily in 
+              training our employees to provide exceptional service and curate a premium shopping experience. 
+              From the moment someone steps into our store, whether it's their first visit or they're a regular 
+              customer, they're greeted with warmth and guided through a seamless shopping journey. Our unwavering 
+              commitment extends to sourcing only the freshest produce and highest quality products from the best 
+              producers and vendors, both locally and internationally. By prioritizing excellence at every touchpoint, 
+              we aim to exceed customer expectations and foster long-lasting relationships built on trust and satisfaction.
+            </p>
+          </div>
+          <div class="flex-new" style="padding-left: 0;">
+            <img src="../images/team.jpg" alt="About Us Image">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-members">
+      <div class="teamh1">
+        <h1>Meet the team</h1>
+      </div>
+      <div class="team-pictures">
+        <div class="val">
+          <div class="pic">
+            <img src="../images/Aaditya1.jpg" alt="team-members">
+          </div>
+          <div class="p1">
+          <h4>Aaditya Bhusal</h4>
+          <p>"The secret of getting ahead is getting started."</p>
+          <a href="Aaditya.html"><button class="button">Know me more</button></a>
+          </div>
+        </div>
+        <div class="val">
+          <div class="pic">
+            <img src="../images/Muskan.jpeg" alt="team-members">
+          </div>
+          <div class="p1">
+          <h4>Muskan Mahato</h4>
+          <p>"Doubt kills more dreams than failure."</p>
+          <a href="Muskan.html"><button class="button">Know me more</button></a>
+          </div>
+        </div>
+        <div class="val">
+          <div class="pic">
+            <img src="../images/prayash.jpg" alt="team-members">
+          </div>
+          <div class="p1">
+          <h4>Prayash Rawal</h4>
+          <p>"Every mistake is a learning opportunity."</p>
+          <a href="Prayash.html"><button class="button">Know me more</button></a>
+          </div>
+        </div>
+        <div class="val">
+          <div class="pic">
+            <img src="../images/Apekshya.jpg" alt="team-members">
+          </div>
+          <div class="p1">
+          <h4>Apekshya Sharma</h4>
+          <p>"I am an Enthusiastic Learner."</p>
+          <a href="Apekshya.html"><button class="button">Know me more</button></button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-us">
+      <h1>Contact Us</h1>
+      <form action="">
+        <label for="firstname">Firstname</label>
+        <input type="text" id="firstname" name="firstname">
+        <label for="lastname">Lastname</label>
+        <input type="text" id="lastname" name="lastname">
+        <div class="new">
+          <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone">
+          </div>
+        </div>
+        <label for="message">Message</label>
+        <textarea placeholder="Your message here..." id="message" name="message"></textarea>
+        <button type="submit" onclick="handleSubmit()">Submit</button>
+      </form>
+    </div>
+
+    <!--footer tag-->
+    <footer>
+      <div class="footer-content">
+        <div class="logo">
+          <img style="margin-top: 36px;" width="100px" src="../images/logo.png" alt="Website Logo">
+        </div>
+          
+        <div class="f-About-us">
+          <h3>About Us</h3>
+          <p>
+            Sabji Mandu Supermarket is a family-operated and owned premier grocery chain in Nepal.
+            We carry fresh produce, fruits and vegetables with a wide selection of groceries 
+          </p>
+        </div>
+
+        <div class="f-contact-us">
+          <h3>Contact Us</h3>
+          <p>Location: Kamalpokhari, Kathmandu, Nepal</p>
+          <p>Email: sabjimandu@gmail.com<br>Phone: +1234567890</p>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-reddit"></i>
+        </div>
+
+        <div class="f-links">
+          <h3>Useful Links</h3>
+          <a href="../index.html">>>Home</a><br>
+          <a href="product.html">>>Product</a><br>
+          <a href="research.html">>>Research</a><br>
+          <a href="blog.html">>>Blog</a><br>
+          <a href="about-us.html">>>About Us</a><br>
+        </div>
+          
+      </div>
+
+      <div class="footer-bottom" style="text-align: center; margin-top: 30px;">
+        <p>&copy; 2024 Sabji-Mandu. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      function handleSubmit(){
+        const firstname = document.getElementById("firstname").value;
+        const lastname = document.getElementById("lastname").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+        if(firstname=="" || lastname=="" || email=="" || phone=="" || message==""){
+          alert("Please fill out all the fields")
+        }
+        else{
+          alert("You Have Submitted Feedback Successfully!")
+          window.location.href = "../index.html";
+        }
+      }
+    </script>
+  </body>
+</html>

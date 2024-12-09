@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <!--Link to the font family-->
+    <!--Font: Black Ops One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
+    <!--Font: Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- font from fontAwesome -->
+    <script src="https://kit.fontawesome.com/358c62a0eb.js" crossorigin="anonymous"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+      #product-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .product-details{
+        display: flex;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        transition: transform ease-in-out 1s;
+      }
+      .quantitybtn{
+        width: 1.5rem;
+        padding: 4px;
+        box-shadow: 0px 3px 5px #0005;
+      }
+      .quantitybtn:hover{
+        cursor: pointer;
+      }
+      .quantityInput{
+        width: 1rem;
+        padding:4px;
+        text-align: center;
+        outline: none;
+      }
+      .product-image-section{
+        flex: 1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+        overflow: hidden;
+        background-color: hsl(39, 100%, 59%);
+      }
+
+      .image{
+        width: 300px;
+        height: 250px;
+        object-fit: contain;
+      }
+
+      .product-description{
+        flex: 1;
+        background-color: hsl(0, 8%, 29%);
+        color: white;
+        padding: 20px;
+      }
+
+      .product-title,.product-price{
+        height: 40px;
+        font-weight: bold;
+      }
+
+      .buy-options{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+
+      .buy-button{
+        padding: 6px;
+        border: none;
+        font-weight: bold;
+        background-color: #97C1A9;
+        color: black;
+        transition: all ease 0.3s;
+      }
+      .buy-button:hover{
+        background-color: #397852;
+        color: white;
+        cursor: pointer;
+      }
+
+      .cart-page{
+        padding: 20px ;
+        margin-top: 40px;
+        display: flex;
+      }
+      #product-grid{
+        flex: 1;
+        overflow: scroll;
+      }
+      .checkout{
+        position: sticky;
+        top: 5rem;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 400px;
+        overflow: auto;
+        height: 570px;
+        background-color: #97C1A9;;
+        color: black;
+        font-size: larger;
+      }
+      *::-webkit-scrollbar {
+        display: none;
+      }
+      .customer-input{
+        padding: 2px 6px;
+      }
+      #checkOutProductDetails{
+        
+        background-color: aliceblue;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        font-size: small;
+      }
+      .checkOutProductDetails{
+        
+        margin-block:1rem;
+        background-color: aliceblue;
+        border-radius: 0.5rem;
+        font-size: small;
+      }
+      .invoice{
+        display: flex;
+        gap:1rem;
+        padding: 0.4rem;
+        border-bottom: 1px dotted black;
+      }
+      .totalPrice{
+        float: right;
+        margin-right: 2.7rem;
+      }
+      .flex1{
+        flex:1;
+      }
+      .flex2{
+        flex:2;
+      }
+      .form{
+        padding: 1rem;
+        font-size: small;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:  0.5rem;
+        flex-direction: column;
+        border-radius: 0.6rem;
+        background-color: aliceblue;
+      }
+      .form-field{
+        display: flex;
+        flex-direction: column;
+      }
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0; /* Optional */
+      }
+      .form-field input{
+        width: 200px;
+        outline: none;
+      }
+      .submit-btn{
+        font-weight: bold;
+        margin-top: 10px;
+        border: 2px none #397852;
+        border-radius: 4px;
+        padding: 6px;
+        background-color: #1e5e12;
+        color: white;
+      }
+      .submit-btn:hover{
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav> <!--This is a navigation bar for the website-->
+
+      <div class="left-section">
+        <img class="website-logo" src="../images/logo.png" alt="sabji-mandu logo">
+      </div>
+
+      <div class="middle-section">
+        <a class="header" href="../index.html"> Home </a>
+        <a class="header" href="product.html"> Product </a>
+        <a class="header" href="blog.html"> Blog </a>
+        <a class="header" href="research.html"> Research </a>
+        <a class="header" href="about-us.html"> About Us </a>
+      </div>
+      
+      <div class="right-section">
+        <!--Wish-list icon for header-->
+        <a class=" wishlist header-icon" href="wishlist.html">
+          <i class="fa-solid fa-heart" style="font-size: 16px;"></i>
+        </a>
+        
+        <!--Add to cart icon for header-->
+        <a class="header-icon cartTab cart" style="color: hsl(120, 90%, 16%);" href="cart.html">
+          <i class="fa-solid fa-cart-shopping" style="font-size: 16px;"></i>
+
+          <!--Notification for cart icon... refer to product.js-->
+          <div id="noInCart">
+            
+          </div>
+        </a>
+
+        <!--login and signin buttons for header-->
+        <a class="header-buttons" href="log-in.html">Log In</a>
+        <a class="header-buttons" href="sign-up.html">Sign Up</a>
+        
+      </div> 
+    </nav>
+
+    <div class="cart-page">
+
+      <!-- Product-grid for Cart Page -->
+      <div id="product-grid">
+      </div>
+      
+      <!-- CheckOut Form -->
+      <div class="checkout">
+        <h1 style="color: black; text-decoration: underline dotted;">
+          Check Out
+        </h1><br>
+
+        <p id="TotalItems">Total Items : (0) </p>
+
+        <div class="checkOutProductDetails">
+          <div id="checkOutProductDetails">
+            <h2 style="text-align: center; margin-bottom: 0.7rem;">Invoice</h2>
+            <div class="invoice">
+              <h3 class="flex2">Name</h3>
+              <h3 class="flex1">Quantity</h3>
+              <h3 class="flex1">Price</h3>
+            </div>
+          </div>
+          <div  class="totalPrice" style="display: flex; flex-direction: column;">
+            <h3>Total Price</h3>
+            <p style="text-align: center;"> $ <span  id="totalPrice">0</span></p>
+          </div>
+        </div>
+        <br>
+
+        <!-- Form Field in CheckOut -->
+        <div class="form">
+          <p style="font-weight: bolder; font-size: medium;">
+            Enter Your Details
+          </p>
+          <div class="form-field">
+            First Name : <input class="customer-input" type="text">
+          </div>
+          <div class="form-field">
+            Last Name : <input class="customer-input" type="text">
+          </div>
+          <div class="form-field">
+            Phone Number : <input class="customer-input" type="number">
+          </div>
+          <div class="form-field">
+            Address : <input class="customer-input" type="text">
+          </div>
+        </div>
+        <button id="checkout" class="submit-btn" onclick="submit()">Check Out</button>
+      </div>
+    </div>
+
+    <!--footer tag-->
+    <footer>
+      <div class="footer-content">
+        <div class="logo">
+          <img style="margin-top: 36px;" width="100px" src="../images/logo.png" alt="Website Logo">
+        </div>
+          
+        <div class="f-About-us">
+          <h3>About Us</h3>
+          <p>
+            Sabji Mandu Supermarket is a family-operated and owned premier grocery chain in Nepal.
+            We carry fresh produce, fruits and vegetables with a wide selection of groceries 
+          </p>
+        </div>
+
+        <div class="f-contact-us">
+          <h3>Contact Us</h3>
+          <p>Location: Kamalpokhari, Kathmandu, Nepal</p>
+          <p>Email: sabjimandu@gmail.com<br>Phone: +1234567890</p>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-reddit"></i>
+        </div>
+
+        <div class="f-links">
+          <h3>Useful Links</h3>
+          <a href="../index.html">>>Home</a><br>
+          <a href="product.html">>>Product</a><br>
+          <a href="research.html">>>Research</a><br>
+          <a href="blog.html">>>Blog</a><br>
+          <a href="about-us.html">>>About Us</a><br>
+        </div>
+          
+      </div>
+
+      <div class="footer-bottom" style="text-align: center; margin-top: 30px;">
+        <p>&copy; 2024 Sabji-Mandu. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../java-script/cart.js"></script>
+  </body>
+</html>

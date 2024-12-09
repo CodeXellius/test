@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .container{
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 40px;
+      display: grid;
+      place-items: center; 
+    }
+    .form-background{
+      filter: blur(8px);
+      z-index: -10;
+      width: 100%;
+    }
+    .loginTab{
+      position: absolute;
+      background-color: rgb(230, 230, 230);
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0px 3px 5px rgba(88, 88, 88,0.7);
+      padding: 1rem;
+      padding-inline: 2rem;
+      z-index: 10;
+    }
+    #form{
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+    }
+    label{
+      text-align: left;
+      font-size: small;
+      margin-bottom: 2px;
+    }
+    input{
+      height: 1.5rem;
+      outline: none;
+      border-radius: 0.5rem;
+      border: 2px solid white;
+      padding: 0.3rem;
+      margin-bottom: 20px;
+    }
+    input:focus{
+      border: 2px solid rgb(109, 160, 235);
+    }
+    h2{
+      margin-bottom: 1rem;
+      border-bottom: 2px dashed black;
+    } 
+    button{
+      height: 3rem;
+      background-color: hsl(206, 67%, 21%);
+      color: white;
+      font-size: large;
+      cursor: pointer;
+      outline: none;
+      border-radius: 0.5rem;
+      border: none;
+      padding-block: 0.3rem;
+      transition: all 0.1s ease-in-out;
+    }
+    button:active{
+      scale: 0.9;
+    }
+  </style>
+</head>
+
+<body style="overflow: hidden;">
+
+  <nav> <!--This is a navigation bar for the website-->
+
+    <div class="left-section">
+      <img class="website-logo" src="../images/logo.png" alt="sabji-mandu logo">
+    </div>
+
+    <div class="middle-section">
+      <a class="header" href="../index.html"> Home </a>
+      <a class="header" href="product.html"> Product </a>
+      <a class="header" href="blog.html"> Blog </a>
+      <a class="header" href="research.html"> Research </a>
+      <a class="header" href="about-us.html"> About Us </a>
+    </div>
+    
+    
+    <div class="right-section">
+      <!--login and signin buttons for header-->
+      <a class="header-buttons" href="log-in.html">Log In</a>
+      <a class="header-buttons" href="sign-up.html ">Sign Up</a>
+      
+    </div> 
+  </nav>
+
+  <div class="container">
+    <img class="form-background" src="../images/form.jpg" alt="form-background-image">
+    <div class="loginTab">
+    <h2>SIGN-UP</h2>
+
+    <form action="/pages/log-in.html" id="form">
+
+      <label for="username"> Username :</label>
+      <input type="name" id="username" placeholder="Username" required>
+
+      <label for="firstname"> First Name :</label>
+      <input type="name" id="firstname" placeholder="FirstName" required>
+
+      <label for="lastname"> Last Name :</label>
+      <input type="name" id="lastname" placeholder="LastName" required>
+
+      <label for="email"> Email :</label>
+      <input type="name" id="email" placeholder="Email" required>
+
+      <label for="password">Password :</label>
+      <input type="password" id="password" placeholder="Password" required>
+      <div style="display: flex; gap: 4px;"><input type="checkbox" id="check"><p style="margin-top: 1px;">Agree to Terms and Conditions</p></div>
+      
+
+      <button type="submit" onclick="handleSignUp()">Sign Up</button>
+      <a style="text-decoration: underline;" href="log-in.html">Log In Instead</a>
+
+    </form>
+    </div>
+  </div>
+
+  <script>
+    function handleSignUp(){
+      const username = document.getElementById("username").value;
+      const fname = document.getElementById("firstname").value;
+      const lname = document.getElementById("lastname").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      let check = document.getElementById("check");
+      if(username=="" ||fname==""|| lname==""|| email==""|| password==""){
+        alert("Please fill out all the fields")
+      }
+      else if(!check.checked){
+        alert("Please agree to the Terms and Condition");
+      }
+      else{
+        alert("Your Account Has Been Created  Successfully!");
+        window.location.href = "login.html";
+      }
+    }
+  </script>
+  
+</body>
+</html>
