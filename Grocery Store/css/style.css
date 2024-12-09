@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Font: Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Font: Nunito Sans */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*Icon: cart*/
+
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body{
+  margin-top: 70px;
+  background-color: white;
+  transition: all ease-in-out 0.35s;
+  overflow: scroll;
+  }
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: green;
+}
+
+/*Navigation Bar*/
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 10px;
+  padding-right: 10px;
+  height: 60px;
+  background-color: #4cb66c;
+  /* background-color:#63af55; */
+}
+
+nav a {
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+.header {
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: black;
+  font-family: "Nunito Sans", sans-serif;
+  justify-content: center;
+  transition: color ease 0.3s;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.header:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.left-section {
+  display: flex;
+  width: 450px;
+  justify-content: start;
+}
+
+.website-logo {
+  width: 100px;
+}
+
+
+.middle-section {
+  display: flex;
+  flex: 1;
+}
+
+.right-section {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: end;
+}
+
+.header-icon {
+  background-color: #027b0c; 
+  color:white; 
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: all ease 0.3s;
+}
+.wishlist:hover{
+  color: hsl(0, 92%, 39%);
+}
+.cart:hover{
+  color: hsl(0, 0%, 0%);
+}
+
+.header-buttons {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 8px 18px;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.header-buttons:hover {
+  background-color: hsl(206, 67%, 21%);
+  color: white;
+  border-color: transparent;
+}
+
+footer{
+  background-color: #d5d3d3;
+}
+.footer-content{
+  position: relative;
+}
+.f-About-us{
+  position: absolute;
+  width: 300px;
+  top: 20px;
+  left: 10%;
+  
+}
+.f-contact-us{
+  position: absolute;
+  top: 20px;
+  left: 650px;
+}
+.f-links{
+  position: absolute;
+  top: 20px;
+  right: 10%;
+}
+
+.left{
+  flex: 1;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  flex: 1;
+}
+
+
+
+/*-----------------------------------------------------------------------------------*/
+
